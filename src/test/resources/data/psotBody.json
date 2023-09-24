@@ -1,0 +1,13 @@
+{
+	"addPost": {
+		"title": "API TEST",
+		"body": "API test result",
+		"userId ": "1"
+	},
+
+	"updateBooking1": {
+		"title": "API TEST updated",
+		"body": "API test result updated",
+		"userId ": "2"
+	}
+}
