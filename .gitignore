@@ -22,8 +22,3 @@
 # virtual machine crash logs, see 
 hs_err_pid*
 
-/test-output/
-/target/
-/.classpath
-/.project
-/.settings

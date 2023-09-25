@@ -1,0 +1,19 @@
+
+@updatePost @updatepost
+Scenario Outline: To update a post using id                                [90m# src/test/resources/features/Update&Delete.feature:16[0m
+  [32mGiven [0m[32ma user is authenticated as an admin and has access to endpoints[0m    [90m# com.api.stepdefinition.CommonStepdef.a_user_is_authenticated_as_an_admin_and_has_access_to_endpoints()[0m
+  [32mAnd [0m[32muser updates the details for post [0m[32m[1m"1"[0m                                [90m# com.api.stepdefinition.UpdateBookingStepdefinition.user_updates_the_details_for_post(java.lang.String,io.cucumber.datatable.DataTable)[0m
+  [32mThen [0m[32muser should get the response code [0m[32m[1m200[0m                               [90m# com.api.stepdefinition.MakePostStepdefinition.userShpuldGetTheResponseCode(java.lang.Integer)[0m
+  [32mAnd [0m[32muser validates the response with JSON schema [0m[32m[1m"createPostSchema.json"[0m [90m# com.api.stepdefinition.MakePostStepdefinition.userValidatesResponseWithJSONSchema(java.lang.String)[0m
+
+@updatePost @partialpost
+Scenario Outline: To partially update a booking                         [90m# src/test/resources/features/Update&Delete.feature:30[0m
+  [32mGiven [0m[32ma user is authenticated as an admin and has access to endpoints[0m [90m# com.api.stepdefinition.CommonStepdef.a_user_is_authenticated_as_an_admin_and_has_access_to_endpoints()[0m
+  [32mAnd [0m[32muser wants to updates the details partially for post [0m[32m[1m"1"[0m          [90m# com.api.stepdefinition.UpdateBookingStepdefinition.user_wants_to_updates_the_details_partially_for_post(java.lang.String,io.cucumber.datatable.DataTable)[0m
+  [32mThen [0m[32muser should get the response code [0m[32m[1m200[0m                            [90m# com.api.stepdefinition.MakePostStepdefinition.userShpuldGetTheResponseCode(java.lang.Integer)[0m
+
+@updatePost @deletePosts
+Scenario Outline: To delete a post                                      [90m# src/test/resources/features/Update&Delete.feature:45[0m
+  [32mGiven [0m[32ma user is authenticated as an admin and has access to endpoints[0m [90m# com.api.stepdefinition.CommonStepdef.a_user_is_authenticated_as_an_admin_and_has_access_to_endpoints()[0m
+  [32mWhen [0m[32muser delete the for post [0m[32m[1m"1"[0m                                     [90m# com.api.stepdefinition.UpdateBookingStepdefinition.user_delete_the_for_post(java.lang.String,io.cucumber.datatable.DataTable)[0m
+  [32mThen [0m[32muser should get the response code [0m[32m[1m200[0m                            [90m# com.api.stepdefinition.MakePostStepdefinition.userShpuldGetTheResponseCode(java.lang.Integer)[0m
